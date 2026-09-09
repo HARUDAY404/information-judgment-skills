@@ -11,7 +11,7 @@ Determine how far the available evidence supports a claim. Audit claims, not peo
 
 Identify the consequential statement and the decision it may influence. Audit all claims only when the user requests a comprehensive review; otherwise prioritize claims that are central, surprising, causal, quantitative, predictive, universal, or action-changing.
 
-When the audit will inform the user's own consequential judgment and no pre-audit view has been saved, invite a brief initial judgment, confidence, and likely failure point before presenting evidence. `undecided` is valid. Do not require this checkpoint for neutral fact-checking, urgent safety work, or when the user declines. Preserve any incoming `signal_id` and assign stable `claim_id` values to audited claims.
+When the audit will inform the user's own consequential judgment, confirm that a pre-audit view has been saved, but do not request or inspect its content when a blind audit is feasible. If no snapshot exists, invite the user to save one before presenting evidence; `undecided` is valid. Do not require this checkpoint for neutral fact-checking, urgent safety work, or when the user declines. If the user's prior position is already visible in the same context, label the audit `non-blind` and actively check whether the evidence review is merely agreeing with it. Preserve any incoming `signal_id` and assign stable `claim_id` values to audited claims.
 
 ## Decompose
 
@@ -61,5 +61,6 @@ Use conclusions such as directly supported, indirectly supported, plausible but 
 - Do not convert source prestige into proof.
 - Do not treat several dependent reports as independent confirmation.
 - Do not manufacture numerical precision from qualitative evidence.
+- Do not treat agreement with the user's prior view as evidence that the audit is correct.
 - Do not decide whether the claim matters personally to the user.
 - Do not proceed to content production as though an uncertain hypothesis were established fact.
