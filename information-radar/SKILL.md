@@ -39,6 +39,7 @@ Return no more than the attention budget. Zero items is a valid result.
 
 For each retained signal provide:
 
+- a stable `signal_id` that can be carried into later review;
 - concise event or claim;
 - why it matters to the stated question;
 - signal type: new event, new evidence, disagreement, weak signal, or repeated narrative;
@@ -56,4 +57,3 @@ End with a compact account of clustered duplicates, excluded noise, coverage gap
 - Do not update a watchlist silently. Recommend additions, removals, or tier changes with reasons.
 - Do not optimize future recommendations from clicks or likes alone. Prefer downstream signals such as changed decisions, completed experiments, durable reuse, and later accuracy.
 - Preserve the user's chosen platform and storage system; output portable structured text when no integration is available.
-

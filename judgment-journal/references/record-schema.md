@@ -7,6 +7,7 @@ id:
 created_at:
 question:
 scope:
+signal_ids: []
 source_claim_ids: []
 user_initial_judgment:
 judgment_type: descriptive | value | action | mixed
@@ -39,4 +40,3 @@ Each review should include date, observed evidence, outcome, process assessment,
 - Database: immutable judgment version rows linked by stable judgment ID.
 
 Store source URLs and timestamps. Do not store only an AI summary when the original evidence can be referenced.
-

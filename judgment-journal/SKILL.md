@@ -7,6 +7,10 @@ description: Record a user's own initial judgment before AI critique, expose ass
 
 Turn audited information into the user's explicit, revisable judgment. The journal exists to improve calibration, not to manufacture polished opinions.
 
+## Use two passes when evidence will be audited
+
+Use a pre-audit pass to save the user's initial view before detailed AI critique, then a post-audit pass to append what changed. Never place the first pass after `claim-auditor`. Carry forward available `signal_id` and `claim_id` values so the reasoning chain remains traceable.
+
 ## Preserve the user's voice first
 
 For a consequential entry, ask the user for a rough initial judgment before proposing one. It may be incomplete. Preserve it verbatim or clearly label a faithful paraphrase. If the user declines or has no view, record `undecided`; do not synthesize an AI-authored opinion and attribute it to the user.
@@ -50,4 +54,3 @@ Do not count unresolved or ambiguously defined forecasts as successes. When enou
 - Do not treat a good outcome as proof of good reasoning, or a bad outcome as proof of bad reasoning.
 - Do not publish or transmit private entries without explicit user authorization.
 - Preserve the user's chosen storage system; use portable Markdown when no adapter is available.
-

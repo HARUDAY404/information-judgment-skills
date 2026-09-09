@@ -11,6 +11,8 @@ Determine how far the available evidence supports a claim. Audit claims, not peo
 
 Identify the consequential statement and the decision it may influence. Audit all claims only when the user requests a comprehensive review; otherwise prioritize claims that are central, surprising, causal, quantitative, predictive, universal, or action-changing.
 
+When the audit will inform the user's own consequential judgment and no pre-audit view has been saved, invite a brief initial judgment, confidence, and likely failure point before presenting evidence. `undecided` is valid. Do not require this checkpoint for neutral fact-checking, urgent safety work, or when the user declines. Preserve any incoming `signal_id` and assign stable `claim_id` values to audited claims.
+
 ## Decompose
 
 Rewrite rhetoric into atomic statements without strengthening the author's language. Expose hidden premises. Classify each as:
@@ -40,6 +42,7 @@ Search deliberately for credible counterevidence, failure cases, base rates, and
 
 For each material claim report:
 
+- `signal_id` when supplied and a stable `claim_id`;
 - original wording and faithful atomic rewrite;
 - claim type;
 - provenance chain;
@@ -60,4 +63,3 @@ Use conclusions such as directly supported, indirectly supported, plausible but 
 - Do not manufacture numerical precision from qualitative evidence.
 - Do not decide whether the claim matters personally to the user.
 - Do not proceed to content production as though an uncertain hypothesis were established fact.
-

@@ -22,6 +22,7 @@ Specify the person, situation, recurring problem, current belief, and desired ch
 
 Use [references/experiment-schema.md](references/experiment-schema.md) to define:
 
+- the originating `judgment_id` and a stable `experiment_id`;
 - one central claim;
 - evidence and visible proof;
 - uncertainty and applicability boundary;
@@ -29,6 +30,7 @@ Use [references/experiment-schema.md](references/experiment-schema.md) to define
 - the most suitable structure and format;
 - desired action or response;
 - one primary experiment variable;
+- one primary metric plus relevant guardrail metrics;
 - success, failure, and learning criteria.
 
 Select an explanatory path that fits the material, such as misconception correction, public experiment, claim audit, system build log, or personal belief revision. Do not impose a viral template on every topic.
@@ -58,4 +60,3 @@ Engagement demonstrates audience behavior under specific conditions, not truth. 
 - Do not optimize on likes alone.
 - Do not change many major variables and then claim to know which caused the result.
 - Do not publish, schedule, message, or otherwise act externally without explicit authorization.
-

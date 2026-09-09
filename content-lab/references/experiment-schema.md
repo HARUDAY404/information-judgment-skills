@@ -4,6 +4,7 @@
 
 ```yaml
 judgment_id:
+experiment_id:
 mode: validated | exploratory
 audience:
 situation:
@@ -20,6 +21,10 @@ headline_hypothesis:
 desired_action:
 primary_experiment_variable:
 held_constant: []
+primary_metric:
+secondary_metrics: []
+guardrail_metrics: []
+measurement_window:
 success_rule:
 failure_rule:
 review_date:
@@ -43,4 +48,3 @@ series_or_product_candidate:
 ```
 
 Choose metrics before publication. Do not retrofit the goal to whichever metric performed best.
-
