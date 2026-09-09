@@ -5,11 +5,11 @@ description: Monitor sources around a user's current questions, cluster duplicat
 
 # Information Radar
 
-Turn a large stream into a small candidate set. Optimize the user's attention, not collection volume.
+Turn a large stream into a small candidate set. Optimize the user's attention, not collection volume. Make the selection process inspectable so the user can judge not only the retained items, but also how the evidence pool was built.
 
 ## Establish the scan contract
 
-Before collecting, pass two lightweight gates. Do not turn them into an endless framing exercise; infer reasonable defaults and ask only when a missing choice would materially change the search.
+Before collecting, pass three lightweight gates. Do not turn them into an endless framing exercise. Propose reasonable defaults and ask the user only about choices that would materially change the evidence pool or intended use.
 
 ### Question gate
 
@@ -28,13 +28,32 @@ Map each evidence need to suitable source roles before collection. Separate sour
 
 Only propose a login, QR scan, browser-cookie access, paid service, or API setup when the missing source would materially improve the answer. Before asking, explain what evidence it adds, what data or permission is involved, cost when known, where outputs are stored, and the limitation if the user declines. A declined or unavailable source becomes an explicit coverage gap, not a reason to fabricate completeness.
 
-Do not start broad collection until both gates are adequate for the chosen mode. A small exploratory scan may proceed with incomplete coverage when that limitation is stated.
+### Collection-protocol gate
+
+For decision-relevant, publishable, or strict scans, show a compact proposed collection protocol before broad collection and let the user correct material assumptions. Define:
+
+- subquestions and the evidence role needed for each;
+- discovery channels, queries or keyword families, including credible opposing searches;
+- time, geography, population, language, and content-type boundaries;
+- inclusion and exclusion rules;
+- sampling or result-selection method for algorithmic platforms;
+- deduplication unit and stopping rule.
+
+For quick exploratory scans, the protocol may be generated and executed without pausing when the defaults are low-risk, but it must still appear in the acquisition record. Read [references/collection-protocol.md](references/collection-protocol.md) when designing a new scan, using an algorithmically ranked platform, or preparing research for a decision or publication.
+
+Do not describe open-web search as representative or scientific sampling unless a defined population and defensible sampling frame justify that wording. More channels, queries, or items do not by themselves establish adequate coverage.
+
+Do not start broad collection until all three gates are adequate for the chosen mode. A small exploratory scan may proceed with incomplete coverage when that limitation is stated.
 
 ## Collect and normalize
 
 Preserve the original URL, author or organization, publication time, retrieval time, content type, and available primary source. Never treat multiple reposts of one origin as independent confirmation.
 
+Keep a search ledger with the channel, query, retrieval time, ordering or filter, number inspected, and access limitation. For algorithmically ranked feeds, record that the sample is platform-selected or personalized and avoid prevalence claims unless a suitable denominator exists.
+
 Group semantically equivalent items into an event cluster. Choose the closest authoritative or original item as the primary entry; retain only interpretations that add independent evidence, a distinct implication, or a meaningful disagreement.
+
+After collection and before synthesis, audit coverage against the planned evidence roles. Distinguish `covered`, `partially_covered`, `missing`, and `unavailable`. A source category is not covered merely because one item was found; check scope, method, independence, recency, and conflicts. If a material gap could change the result, either continue collection, ask for a justified unlock, narrow the question, or explicitly prohibit the unsupported conclusion.
 
 ## Triage
 
@@ -46,7 +65,15 @@ Maintain diversity deliberately. When available and relevant, include original s
 
 ## Output
 
-Return no more than the attention budget. Zero items is a valid result.
+Return an evidence packet, not an invisible feed ranking. Keep the main digest within the attention budget; zero retained items is a valid result.
+
+Start with a compact research contract and acquisition receipt:
+
+- the operational question, scope, mode, and evidence roles;
+- channels and query families actually used;
+- counts inspected, deduplicated, excluded, and retained when available;
+- major exclusion reasons, access limits, and algorithmic-sampling caveats;
+- coverage status and conclusions that the evidence cannot support.
 
 For each retained signal provide:
 
@@ -61,10 +88,15 @@ For each retained signal provide:
 
 End with a compact account of clustered duplicates, excluded noise, coverage gaps, and notable opposing evidence. Do not turn the digest into a long essay.
 
+When the packet will precede the user's own judgment, present source material and evidence roles before a persuasive synthesis. Clearly separate source statements from Radar's selection rationale so the digest does not silently become the user's conclusion.
+
 ## Boundaries
 
 - Do not declare truth from a Radar score.
 - Do not confuse a topic with a research question, or available sources with adequate coverage.
+- Do not claim completeness, representativeness, or scientific coverage from search volume or platform variety.
+- Do not infer prevalence or consensus from engagement, top-ranked results, or a purposive community sample.
+- Do not silently change the agreed question, geography, population, time window, or intended decision during collection.
 - Do not fill a quota on a quiet day.
 - Do not update a watchlist silently. Recommend additions, removals, or tier changes with reasons.
 - Do not optimize future recommendations from clicks or likes alone. Prefer downstream signals such as changed decisions, completed experiments, durable reuse, and later accuracy.
