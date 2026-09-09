@@ -9,15 +9,26 @@ Turn a large stream into a small candidate set. Optimize the user's attention, n
 
 ## Establish the scan contract
 
-Before collecting, infer or ask only when material information is missing:
+Before collecting, pass two lightweight gates. Do not turn them into an endless framing exercise; infer reasonable defaults and ask only when a missing choice would materially change the search.
+
+### Question gate
+
+Clarify what decision or understanding the scan should support, whether the question is decision-led or exploratory, what its key terms mean in context, and what would make the scan worth the user's attention. Reframe an unbounded topic into an answerable question without pretending the first wording is final.
+
+Establish:
 
 - the decision or question this scan should inform;
 - time window, affected population, geography, and domain;
 - attention budget and strictness profile;
-- sources to prioritize, observe, or exclude;
 - whether community experience, scientific evidence, product updates, market signals, or practitioner cases are needed.
 
-Use a suitable source profile from [references/source-profiles.md](references/source-profiles.md). Do not rebuild the source strategy from scratch when a maintained profile fits. State material gaps in accessible sources.
+### Coverage gate
+
+Map each evidence need to suitable source roles before collection. Separate sources into `available`, `important_but_missing`, and `unlockable`. For every material source type, state what it can establish and what it cannot. Use a suitable source profile from [references/source-profiles.md](references/source-profiles.md); combine profiles when the question spans multiple evidence types.
+
+Only propose a login, QR scan, browser-cookie access, paid service, or API setup when the missing source would materially improve the answer. Before asking, explain what evidence it adds, what data or permission is involved, cost when known, where outputs are stored, and the limitation if the user declines. A declined or unavailable source becomes an explicit coverage gap, not a reason to fabricate completeness.
+
+Do not start broad collection until both gates are adequate for the chosen mode. A small exploratory scan may proceed with incomplete coverage when that limitation is stated.
 
 ## Collect and normalize
 
@@ -53,6 +64,7 @@ End with a compact account of clustered duplicates, excluded noise, coverage gap
 ## Boundaries
 
 - Do not declare truth from a Radar score.
+- Do not confuse a topic with a research question, or available sources with adequate coverage.
 - Do not fill a quota on a quiet day.
 - Do not update a watchlist silently. Recommend additions, removals, or tier changes with reasons.
 - Do not optimize future recommendations from clicks or likes alone. Prefer downstream signals such as changed decisions, completed experiments, durable reuse, and later accuracy.
