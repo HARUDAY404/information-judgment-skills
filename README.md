@@ -237,7 +237,7 @@ Good Judgment Project 的研究显示，训练、协作、持续追踪和反馈�
 
 如果其他 AI 工具不支持 Agent Skills，也可以把相应的 `SKILL.md` 当作工作流指令使用。定时监测、平台抓取、历史存储和知识库同步还需要额外工具或自动化，不是一个 Skill 文件本身就能完成的。
 
-## 对外介绍时的一句话版本
+## 一句话介绍
 
 > Information Judgment Skills 是一套受认知科学和 AI 评估方法启发的信息工作流：用 Radar 减少噪声，用 Auditor 检查证据，用 Journal 保留自己的判断，再用 Content Lab 把成熟判断变成内容。它不替你思考，而是让你的思考更容易被检查、复盘和改进。
 
